@@ -56,7 +56,7 @@ class MainActivity : ComponentActivity() {
 sealed class Screen(val route: String) {
     //   object Welcome : Screen("MainActivity")
     object Home : Screen("Home")
-    object NamesLazyColumn : Screen("NamesLazyColumnScreen")
+    object NamesLazyColumn : Screen("NamesLazyColumn")
     object Pendulum : Screen("Pendulum")
     object PosteriorStretching : Screen("PosteriorStretching")
     object UpTheBackStretch : Screen("UpTheBackStretch")
@@ -67,7 +67,6 @@ sealed class Screen(val route: String) {
     object WallClimberFront : Screen("WallClimberFront")
     object ShoulderBladeSqueeze : Screen("ShoulderBladeSqueeze")
     object ArmReachFront : Screen("ArmReachFront")
-    object ArmReachSide : Screen("ArmReachSide")
     object ShoulderFlexorAndExtensor : Screen("ShoulderFlexorAndExtensor")
     object ArmRaiseSide : Screen("ArmRaiseSide")
     object WallPushUp : Screen("WallPushUp")
@@ -82,7 +81,7 @@ fun MyApp() {
 
     NavHost(navController = navController, startDestination = Screen.Home.route) {
         composable(Screen.Home.route) { Home(navController) }
-        composable(Screen.NamesLazyColumn.route) { NamesLazyColumnScreen(navController) }
+        composable(Screen.NamesLazyColumn.route) { NamesLazyColumn(navController) }
         composable(Screen.Pendulum.route) { Pendulum(navController) }
         composable(Screen.UpTheBackStretch.route) { UpTheBackStretch(navController) }
         composable(Screen.ArmRaiseSide.route) { ArmRaiseSide(navController) }
@@ -94,7 +93,6 @@ fun MyApp() {
         composable(Screen.WallClimberFront.route) { WallClimberFront(navController) }
         composable(Screen.ShoulderBladeSqueeze.route) { ShoulderBladeSqueeze(navController) }
         composable(Screen.ArmReachFront.route) { ArmReachFront(navController) }
-       // composable(Screen.ArmReachSide.route) { ArmReachSide(navController) }
         composable(Screen.ShoulderFlexorAndExtensor.route) { ShoulderFlexorAndExtensor(navController) }
         composable(Screen.WallPushUp.route) { WallPushUp(navController) }
         composable(Screen.ScapularRetraction.route) { ScapularRetraction(navController) }

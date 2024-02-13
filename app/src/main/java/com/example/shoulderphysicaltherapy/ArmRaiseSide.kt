@@ -82,7 +82,7 @@ fun ArmRaiseSide(navController: NavController) {
         Spacer(modifier = Modifier.height(30.dp))
 
         // Second button
-        Button(onClick = { navController.navigate("HomePage") }) {
+        Button(onClick = { navController.navigate("NamesLazyColumn") }) {
             Text("Back to Exercise List", fontSize = 20.sp)
         }
     }

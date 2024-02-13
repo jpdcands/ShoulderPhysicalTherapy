@@ -89,7 +89,7 @@ fun Home(navController: NavController) {
                             .padding(top = 20.dp)
                     ) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Button(onClick = { navController.navigate("HomePage") }) {
+                            Button(onClick = { navController.navigate("NamesLazyColumn") }) {
                                 Text("Begin Exercises", fontSize = 30.sp)
                             }
                         }
@@ -100,14 +100,5 @@ fun Home(navController: NavController) {
     }
 }
 
-/*@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun HomePreview() {
-    // Create a dummy NavController for preview purposes
-    val navController = rememberNavController()
-
-    ShoulderPhysicalTherapyTheme {
-        Welcome(navController)
-    } */
 
 
