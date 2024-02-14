@@ -39,17 +39,17 @@ fun HomePage(navController: NavController) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
             Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = { navController.navigate("Home") }) {
+            Button(onClick = { navController.navigate("Welcome") }) {
                 Text("Back to Welcome Page", fontSize = 20.sp)
             }
             Spacer(modifier = Modifier.height(16.dp))
-            NamesLazyColumnScreen(navController)
+            NamesLazyColumn(navController)
         }
     }
 }
 
 @Composable
-fun NamesLazyColumnScreen(navController: NavController) {
+fun NamesLazyColumn(navController: NavController) {
     val exerciseList = listOf(
         "Pendulum",
         "Posterior Stretching",
@@ -113,7 +113,7 @@ fun NamesLazyColumnScreen(navController: NavController) {
     }
 
     LazyVerticalGrid(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp),
         contentPadding = PaddingValues(vertical = 16.dp),
         columns = GridCells.Fixed(2)
     ) {
@@ -147,13 +147,18 @@ fun NamesLazyColumnScreen(navController: NavController) {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreviewHomePage() {
-    val navController = rememberNavController()
-    HomePage(navController)
-    NamesLazyColumn(navController)
-}
+
+
+   @Preview(showBackground = true)
+    @Composable
+    fun DefaultPreviewHomePage() {
+        val navController = rememberNavController()
+        HomePage(navController)
+    }
+
+
+
+
 
 
 
