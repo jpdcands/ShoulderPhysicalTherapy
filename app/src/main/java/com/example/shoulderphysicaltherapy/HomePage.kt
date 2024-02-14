@@ -113,7 +113,7 @@ fun NamesLazyColumn(navController: NavController) {
     }
 
     LazyVerticalGrid(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp),
+        modifier = Modifier.fillMaxWidth(),
         contentPadding = PaddingValues(vertical = 16.dp),
         columns = GridCells.Fixed(2)
     ) {
@@ -146,8 +146,6 @@ fun NamesLazyColumn(navController: NavController) {
         }
     }
 }
-
-
 
    @Preview(showBackground = true)
     @Composable

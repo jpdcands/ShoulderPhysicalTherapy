@@ -27,12 +27,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun HomePage(navController: NavController, viewModel: ExerciseViewModel) {
@@ -44,13 +41,13 @@ fun HomePage(navController: NavController, viewModel: ExerciseViewModel) {
                 Text("Back to Welcome Page", fontSize = 20.sp)
             }
             Spacer(modifier = Modifier.height(16.dp))
-            NamesLazyColumn(navController)
+            NamesLazyColumnScreen(navController)
         }
     }
 }
 
 @Composable
-fun NamesLazyColumn(navController: NavController) {
+fun NamesLazyColumnScreen(navController: NavController) {
 
     val exerciseList = listOf(
         "Pendulum",
